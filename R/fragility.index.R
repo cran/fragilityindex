@@ -1,5 +1,5 @@
 #' @title Fragility Index Calculation
-#' @description Compute the fragility index for a dichotomous outcome
+#' @description Compute the fragility index for a dichotomous outcome, i.e. the number of flipped outcomes between cases and control it would take to make a significant-result non-significant.
 #'
 #' @param intervention_event Number of events in intervention group
 #' @param control_event Number of events in control group
@@ -7,6 +7,7 @@
 #' @param control_n Total number of patients in the control group
 #' @param conf.level Significance level
 #' @param verbose Logical indicating if function will return verbose results or only fragility index
+#' @param print.mat Logical indicating if 2x2 matrices should be printed for each iteration of algorithm
 #'
 #' @examples
 #' fragility.index(15, 5, 40, 40)
@@ -19,7 +20,7 @@
 #' @importFrom stats chisq.test
 #' @export fragility.index
 
-fragility.index <- function(intervention_event, control_event, intervention_n, control_n, conf.level=0.95, verbose=FALSE){
+fragility.index <- function(intervention_event, control_event, intervention_n, control_n, conf.level=0.95, verbose=FALSE, print.mat=FALSE){
 
   if(control_event>intervention_event){
     warning("Control events > intervention events. Swapping intervention and control groups.")
@@ -53,10 +54,11 @@ fragility.index <- function(intervention_event, control_event, intervention_n, c
           intervention_event = intervention_event - 1
           control_event = control_event + 1
           mat <- matrix(c(intervention_event, control_event, intervention_n-intervention_event, control_n-control_event),nrow=2)
+          if(print.mat==TRUE){ print(mat) }
           test <- fisher.test(mat)
         }
 
-        return(list(index=fragility.index))
+        return(list(findex=fragility.index))
       }
     }
 
@@ -77,6 +79,7 @@ fragility.index <- function(intervention_event, control_event, intervention_n, c
           intervention_event = intervention_event - 1
           control_event = control_event + 1
           mat <- matrix(c(intervention_event, control_event, intervention_n-intervention_event, control_n-control_event),nrow=2)
+          if(print.mat==TRUE){ print(mat) }
           test <- fisher.test(mat)
           res <- c(fragility.index, test$p.value)
           outdf <- rbind(outdf, res)

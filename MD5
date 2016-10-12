@@ -1,4 +1,13 @@
-42a3854c4aef1aa3aaf1c9206d4de032 *DESCRIPTION
-cce449c84d5438e5720e91b6d4c86071 *NAMESPACE
-18e028b9132233507a5f2fbea140e05b *R/fragility.index.R
-b6313e4794322c16bd2a2dd8ee750bcf *man/fragility.index.Rd
+52b90beb75fafbce704593fd7fd51863 *DESCRIPTION
+62f270551f07f7c4b7631fdf7079f56d *NAMESPACE
+2f94248a68980ad1f36f65f062b84331 *R/fragility.index.R
+ce5b2ba115eede2dda559c8639650f5b *R/glmfit2table.R
+dfcf5cb7ee5b9dde22f7cbfe2b14e2f5 *R/logisticfragility.R
+790d63611afa392ab6283d125ea3bef0 *R/logisticfragilityinternal.R
+1e1d0e566e9ff8f6bc68cf7930bc962d *R/revfragility.index.R
+62f86063cd6d9288bb66556ca7fae03c *README.md
+0257dec65c2a0ee4694e076c4fac6285 *man/fragility.index.Rd
+0a9a61a22764bebc778cee6403814c45 *man/glmfit2table.Rd
+90c89c2dbfd9070ce52d15877521c672 *man/logisticfragility.Rd
+939e0f6bdd86c573a2f6f1f3201bca81 *man/logisticfragilityinternal.Rd
+b6fc0ef1dd1b324f6fc58df147f0d829 *man/revfragility.index.Rd
