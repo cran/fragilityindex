@@ -1,7 +1,7 @@
 Package: fragilityindex
 Type: Package
 Title: Fragility Index
-Version: 0.0.7
+Version: 0.0.8
 Authors@R: person("Kipp", "Johnson", email = "kipp.william.johnson@gmail.com", role = c("aut", "cre"))
 Description: Implements and extends the fragility index calculation for
     dichotomous results as described in Walsh, Srinathan, McAuley,
@@ -9,12 +9,12 @@ Description: Implements and extends the fragility index calculation for
     Thabane, Walter, Pogue, and Devereaux (2014)
     <DOI:10.1016/j.jclinepi.2013.10.019>.
 License: AGPL-3
-Imports: stats, pbapply
+Imports: stats, pbapply, survival, stringr
 LazyData: TRUE
 RoxygenNote: 5.0.1.9000
 NeedsCompilation: no
-Packaged: 2016-10-11 18:53:17 UTC; kwj
+Packaged: 2016-11-08 14:59:55 UTC; kwj
 Author: Kipp Johnson [aut, cre]
 Maintainer: Kipp Johnson <kipp.william.johnson@gmail.com>
 Repository: CRAN
-Date/Publication: 2016-10-12 00:01:06
+Date/Publication: 2016-11-08 18:35:58
